@@ -1,17 +1,19 @@
-import citiesData from "@data/cities.json";
 import Button from "@components/buttons/Button";
+import { useContext } from "react";
+import CityContext from "@context/CityContext";
+
+import { getAllCities } from "@apis/booking";
+
 export default function () {
-    const cities = citiesData.cities;
-
-    const handleClick = (id) => {
-        console.log(id)
-    }
-
+    const cities = getAllCities();
+    const {cityId, setCityId} = useContext(CityContext)
+    
     const citiesGroup = cities.map((city, index) => (
-        <div key={city.id} onClick={() => handleClick(city.id)}>
+        <div key={city.id} onClick={() => setCityId(city.id)}>
             <Button >{city.name}</Button>
         </div>
     ));
+    
     return (
         <>
             <div className="max-w-lg mx-auto p-5 bg-white border border-gray-300 rounded-lg shadow-md">
