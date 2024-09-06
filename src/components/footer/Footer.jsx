@@ -1,66 +1,66 @@
 export default function () {
     return (
         <>
-            <footer class="bg-gray-800 text-white py-8">
-                <div class="container mx-auto px-4">
-                    <div class="flex flex-col md:flex-row justify-between items-center">
-                        <div class="mb-4 md:mb-0">
-                            <div class="flex items-center mb-2">
+            <footer className="bg-gray-800 text-white py-8">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="mb-4 md:mb-0">
+                            <div className="flex items-center mb-2">
                                 <img
                                     src="https://via.placeholder.com/50"
                                     alt="QFX Movies Logo"
-                                    class="h-10 w-10 mr-3"
+                                    className="h-10 w-10 mr-3"
                                 />
-                                <span class="text-lg font-bold">
+                                <span className="text-lg font-bold">
                                     QFX Movies
                                 </span>
                             </div>
-                            <p class="text-sm text-gray-400">
+                            <p className="text-sm text-gray-400">
                                 Experience movies like never before at QFX
                                 Movies.
                             </p>
                         </div>
 
-                        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+                        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-white text-sm"
+                                className="text-gray-400 hover:text-white text-sm"
                             >
                                 Home
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-white text-sm"
+                                className="text-gray-400 hover:text-white text-sm"
                             >
                                 About Us
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-white text-sm"
+                                className="text-gray-400 hover:text-white text-sm"
                             >
                                 Contact
                             </a>
                             <a
                                 href="#"
-                                class="text-gray-400 hover:text-white text-sm"
+                                className="text-gray-400 hover:text-white text-sm"
                             >
                                 Privacy Policy
                             </a>
                         </div>
 
-                        <div class="flex space-x-4 mt-4 md:mt-0">
-                            <a href="#" class="text-gray-400 hover:text-white">
+                        <div className="flex space-x-4 mt-4 md:mt-0">
+                            <a href="#" className="text-gray-400 hover:text-white">
                                 <svg
-                                    class="h-5 w-5"
+                                    className="h-5 w-5"
                                     fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
                                     <path d="M22.5 0h-21A1.5 1.5 0 000 1.5v21A1.5 1.5 0 001.5 24h11.235v-9.32h-3.14v-3.64h3.14V8.735c0-3.1 1.89-4.785 4.654-4.785 1.324 0 2.463.1 2.795.145v3.24l-1.92.001c-1.506 0-1.798.717-1.798 1.77V11.04h3.595l-.468 3.64h-3.127V24h6.128A1.5 1.5 0 0024 22.5v-21A1.5 1.5 0 0022.5 0z" />
                                 </svg>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-white">
+                            <a href="#" className="text-gray-400 hover:text-white">
                                 <svg
-                                    class="h-5 w-5"
+                                    className="h-5 w-5"
                                     fill="currentColor"
                                     viewBox="0 0 24 24"
                                 >
@@ -70,7 +70,7 @@ export default function () {
                         </div>
                     </div>
 
-                    <div class="text-center text-gray-400 mt-6 text-sm">
+                    <div className="text-center text-gray-400 mt-6 text-sm">
                         &copy; 2024 QFX Movies. All rights reserved.
                     </div>
                 </div>
