@@ -1,0 +1,24 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "Devi"
+        },
+        {
+            "id": 2,
+            "name": "The Greatest of All Time"
+        },
+        {
+            "id": 3,
+            "name": "Stree 2"
+        },
+        {
+            "id": 4,
+            "name": "Vedaa"
+        },
+        {
+            "id": 5,
+            "name": "Gharjwain"
+        }
+    ]
+}

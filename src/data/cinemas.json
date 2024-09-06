@@ -1,0 +1,29 @@
+{
+    "cinemas": [
+        {
+            "id": 1,
+            "name": "Cinema 1"
+        },
+            
+        {
+            "id": 2,
+            "name": "Cinema 2"
+        },
+        {
+            "id": 3,
+            "name": "Cinema 3"
+        },
+        {
+            "id": 4,
+            "name": "Cinema 4"
+        },
+        {
+            "id": 5,
+            "name": "Cinema 5"
+        },
+        {
+            "id": 6,
+            "name": "Cinema 6"
+        }
+    ]
+}

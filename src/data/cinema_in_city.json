@@ -1,0 +1,28 @@
+{
+    "available_cinemas": [
+        {
+            "city_id": 1,
+            "cinema_id": 1
+        },
+        {
+            "city_id": 1,
+            "cinema_id": 2
+        },
+        {
+            "city_id": 2,
+            "cinema_id": 3
+        },
+        {
+            "city_id": 2,
+            "cinema_id": 4
+        },
+        {
+            "city_id": 3,
+            "cinema_id": 5
+        },
+        {
+            "city_id": 3,
+            "cinema_id": 6
+        }
+    ]
+}

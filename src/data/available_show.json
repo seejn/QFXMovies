@@ -1,0 +1,76 @@
+{
+    "shows": [
+        {
+            "cinema_id": 1,
+            "movie_id": 2,
+            "date_id": 1,
+            "time_id": 3
+        },
+        {
+            "cinema_id": 1,
+            "movie_id": 3,
+            "date_id": 3,
+            "time_id": 4
+        },
+        {
+            "cinema_id": 2,
+            "movie_id": 4,
+            "date_id": 4,
+            "time_id": 3
+        },
+        {
+            "cinema_id": 2,
+            "movie_id": 5,
+            "date_id": 3,
+            "time_id": 4
+        },
+        {
+            "cinema_id": 3,
+            "movie_id": 2,
+            "date_id": 1,
+            "time_id": 3
+        },
+        {
+            "cinema_id": 3,
+            "movie_id": 4,
+            "date_id": 3,
+            "time_id": 1
+        },
+        {
+            "cinema_id": 4,
+            "movie_id": 4,
+            "date_id": 2,
+            "time_id": 1
+        },
+        {
+            "cinema_id": 4,
+            "movie_id": 3,
+            "date_id": 2,
+            "time_id": 2
+        },
+        {
+            "cinema_id": 5,
+            "movie_id": 1,
+            "date_id": 3,
+            "time_id": 2
+        },
+        {
+            "cinema_id": 5,
+            "movie_id": 2,
+            "date_id": 3,
+            "time_id": 1
+        },
+        {
+            "cinema_id": 6,
+            "movie_id": 2,
+            "date_id": 2,
+            "time_id": 1
+        },
+        {
+            "cinema_id": 6,
+            "movie_id": 5,
+            "date_id": 3,
+            "time_id": 6
+        }
+    ]
+}
