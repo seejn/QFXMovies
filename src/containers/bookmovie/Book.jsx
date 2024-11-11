@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import CityContext from "../../context/CityContext";
-import { getCinemas, getMovies, getDates, getTime } from "@apis/booking";
+import { getCinemas, getMovies, getDates, getTime } from "@apis/booking.js";
 import BookingContext from "../../context/BookingContext";
 
 export default function () {
