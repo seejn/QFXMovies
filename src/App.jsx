@@ -1,17 +1,11 @@
-import CitiesGroup from "@containers/citiesgroup/CitiesGroup";
-import Navigation from "@containers/navigation/Navigation";
-import MoviesCollection from "@containers/movies/MoviesCollection";
-import Footer from "@components/footer/Footer";
-import Book from "@containers/bookmovie/Book";
-
+import { BrowserRouter } from "react-router-dom";
+import Router from "./router/router";
 function App() {
     return (
         <>
-            <CitiesGroup />
-            <Navigation />
-            <MoviesCollection />
-            <Footer />
-            <Book />
+            <BrowserRouter>
+                <Router />
+            </BrowserRouter>
         </>
     );
 }
