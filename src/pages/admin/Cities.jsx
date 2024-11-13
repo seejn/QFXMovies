@@ -1,44 +1,83 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
+
 import Layout from "../../layouts/Admin/Layout";
 import FormView from "../../components/forms/Form";
 
-import { getAllCities, addCity } from "../../apis/cities";
-import { useEffect } from "react";
+import useCities from "../../hooks/admin/useCities";
+
+const CityCard = ({ city, handleEdit, handleDelete }) => {
+    const [updatedCity, setUpdatedCity] = useState(city.name);
+    const [showEditForm, setShowEditForm] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await handleEdit(city.id, {name: updatedCity});
+        setShowEditForm(false);
+    }
+
+    const editForm = showEditForm && (
+        <FormView 
+            submitText={"Save"}
+            setShowForm={setShowEditForm}
+            handleSubmit={handleSubmit}
+        >
+            <input
+                type="text"
+                placeholder="New City Name"
+                className="w-full p-2 border rounded mb-4"
+                defaultValue={city.name}
+                onChange={(e) => setUpdatedCity(e.target.value)}
+            />
+        </FormView>
+    );
+
+    return (
+        <>
+            {editForm}
+            <div
+                key={city?.id || 1}
+                className="bg-white p-4 rounded shadow hover:shadow-lg transition"
+            >
+                <h3 className="text-xl font-semibold">
+                    {city?.name || "random city"}
+                </h3>
+                <div className="mt-2 flex space-x-4">
+                    <FaEdit
+                        className="text-blue-500 cursor-pointer hover:text-blue-600 transition"
+                        onClick={() => setShowEditForm(true)}
+                        title="Edit"
+                        size={20} // Adjust size as needed
+                    />
+                    <FaTrash
+                        className="text-red-500 cursor-pointer hover:text-red-600 transition"
+                        onClick={() => handleDelete(city?.id)}
+                        title="Delete"
+                        size={20} // Adjust size as needed
+                    />
+                </div>
+            </div>
+        </>
+    );
+};
 
 const CitiesPage = () => {
-    const [cities, setCities] = useState([]);
-    const [showForm, setShowForm] = useState(false);
-    const [newCity, setNewCity] = useState("");
+    const {
+        cities,
+        newCity,
+        setNewCity,
+        showForm,
+        setShowForm,
+        fetchCities,
+        handleAdd,
+        handleEdit,
+        handleDelete,
+    } = useCities();
 
     useEffect(() => {
-        const fetchCities = async () => {
-            try{
-                const data = await getAllCities();
-                setCities([...data]);
-            }catch(error){
-                console.error("Error while fetching cities", error);
-            }
-        }   
         fetchCities();
-    },[]);
+    }, []);
 
-    const handleAddCity = async (e) => {
-        e.preventDefault();
-        if (newCity) {
-            const newCityObj = {
-                name: newCity,
-            };
-            try{
-                const data = await addCity(newCityObj)
-                setCities([...cities, data]);
-            }catch(error){
-                alert("Something went wrong");
-            }
-
-            setNewCity("");
-            setShowForm(false);
-        }
-    };
     return (
         <>
             <Layout>
@@ -59,20 +98,22 @@ const CitiesPage = () => {
                     {/* City Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {cities.map((city) => (
-                            <div
-                                key={city?.id || 1}
-                                className="bg-white p-4 rounded shadow hover:shadow-lg transition"
-                            >
-                                <h3 className="text-xl font-semibold">
-                                    {city?.name || "random city"}
-                                </h3>
-                            </div>
+                            <CityCard
+                                key={city.id}
+                                city={city}
+                                handleEdit={handleEdit}
+                                handleDelete={handleDelete}
+                            />
                         ))}
                     </div>
 
                     {/* Add City Form Modal */}
                     {showForm && (
-                        <FormView handleSubmit={handleAddCity} submitText="Add City" setShowForm={setShowForm}>
+                        <FormView
+                            handleSubmit={handleAdd}
+                            submitText="Add City"
+                            setShowForm={setShowForm}
+                        >
                             <input
                                 type="text"
                                 placeholder="City Name"
