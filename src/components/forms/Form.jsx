@@ -1,10 +1,10 @@
-const FormView = ({children, submitText, handleSubmit, setShowForm}) => {
+const FormView = ({children, title="", submitText, handleSubmit, setShowForm}) => {
     return (
         <>
             <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
                 <div className="bg-white p-6 rounded-lg shadow-lg w-96">
                     <h3 className="text-2xl font-semibold mb-4">
-                        Add New City
+                        {title}
                     </h3>
                     <form onSubmit={handleSubmit}>
                         {children}
