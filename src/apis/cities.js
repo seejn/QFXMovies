@@ -38,7 +38,7 @@ export const updateCity = async (id, data) => {
             method: "PATCH",
             data: data,
             headers: {
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzIyMmFkNDM4MmQ0ZWE2MWRiZjI5ZCIsImVtYWlsIjoic2Vlam5tYWhhcmphbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzE1MTM4NTEsImV4cCI6MTczMTUxNzQ1MX0.dEwUOVYxU0n50j_ja64l4Bxut0nURcKN-iCAiYDkJhk"
+                Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN}`
             }
         });
         alert(response.data.message);
@@ -55,7 +55,7 @@ export const deleteCity = async (id) => {
             url: `${baseUrl}/cities/${id}`,
             method: "DELETE",
             headers: {
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzIyMmFkNDM4MmQ0ZWE2MWRiZjI5ZCIsImVtYWlsIjoic2Vlam5tYWhhcmphbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzE1MTM4NTEsImV4cCI6MTczMTUxNzQ1MX0.dEwUOVYxU0n50j_ja64l4Bxut0nURcKN-iCAiYDkJhk"
+                Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN}`
             }
         });
         alert(response.data.message);
